@@ -1,2 +1,2 @@
 # devflix
-imersão react - criando uma aplicação inspirado na netflix
+imersão react da Alura - criando uma aplicação inspirado na netflix
