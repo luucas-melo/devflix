@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Menu from '../../components/Menu'
 import dadosIniciais from '../../data/dados_iniciais.json';
