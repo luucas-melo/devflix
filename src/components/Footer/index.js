@@ -4,15 +4,12 @@ import { FooterBase } from './styles';
 function Footer() {
   return (
     <FooterBase>
-      <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+      <a href="https://fontmeme.com/netflix-font/">
+        <img src="https://fontmeme.com/permalink/200729/d79103fe8d8682456ba7ca03ec47f13c.png"
+          alt="netflix-font" border="0" />
       </a>
       <p>
-        Orgulhosamente criado durante a
-        {' '}
-        <a href="https://www.alura.com.br/">
-          Imersão React da Alura
-        </a>
+        Suas vídeo-aulas organizadas por disciplina
       </p>
     </FooterBase>
   );
