@@ -1,30 +1,51 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
-
+import { Label ,Button } from './styles';
 function CadastroCategoria() {
   return (
     <PageDefault>
-      <h1>Cadastro de Categoria</h1>
 
+      <h1 className="title">Nova categoria</h1>
       <form>
-
-        <label>
-          Nome da Categoria:
+        <Label>
           <input
             type="text"
+            placeholder="Nome"
           />
-        </label>
+        </Label>
+        <Label>
+          <textarea
+            type="text"
+            placeholder="Teste"
+          />
+        </Label>
+        <Label>
+          <input
+            type="text"
+            placeholder="Cor"
+          />
+        </Label>
+        <Label>
+          <input
+            type="text"
+            placeholder="Código de segurança"
+          />
+        </Label>
+        <Button>
+          Salvar
+        </Button>
+        <Button>
+          Limpar
+        </Button>
 
-        <button>
-          Cadastrar
-        </button>
       </form>
 
 
       <Link to="/">
         Ir para home
       </Link>
+
     </PageDefault>
   )
 }
