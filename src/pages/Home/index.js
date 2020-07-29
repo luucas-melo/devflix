@@ -11,34 +11,34 @@ function Home() {
       <Menu />
 
       <BannerMain
-        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        url={dadosIniciais.categorias[0].videos[0].url}
+        videoTitle={dadosIniciais.categories[0].videos[0].titulo}
+        url={dadosIniciais.categories[0].videos[0].url}
         videoDescription={"Acompanhe essa série sobre matemática básica, afinal, uma boa base possibilita construir um bom aprendizado."}
       />
 
       <Carousel
         ignoreFirstVideo
-        category={dadosIniciais.categorias[0]}
+        category={dadosIniciais.categories[0]}
       />
 
       <Carousel
-        category={dadosIniciais.categorias[1]}
+        category={dadosIniciais.categories[1]}
       />
 
       <Carousel
-        category={dadosIniciais.categorias[2]}
+        category={dadosIniciais.categories[2]}
       />      
 
       <Carousel
-        category={dadosIniciais.categorias[3]}
+        category={dadosIniciais.categories[3]}
       />      
 
       <Carousel
-        category={dadosIniciais.categorias[4]}
+        category={dadosIniciais.categories[4]}
       />      
 
       <Carousel
-        category={dadosIniciais.categorias[5]}
+        category={dadosIniciais.categories[5]}
       />      
 
       <Footer />
