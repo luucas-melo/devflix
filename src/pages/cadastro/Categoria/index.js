@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import { Button } from './styles';
 import FormField from '../../../components/FormField';
+import { baseUrl } from '../../../shared/baseUrl';
 
 function CategoryRegister() {
   const InitialValues = {
@@ -31,26 +32,19 @@ function CategoryRegister() {
     );
   }
   useEffect(() => {
-    const URL = 'http://localhost:3001/categorias';
-    fetch(URL)
-      .then(async (serverAnswer) => {
-        const answer = await serverAnswer.json();
-        setCategories([
-          ...answer,
-        ]);
-      });
-    //setCategories([
-    //  ...categories,
-    //  {
-    //    id: 1,
-    //    name: 'Front End',
-    //    description: 'Uma categoria',
-    //    color: '#cbd1ff',
-    //  },
-    //]);
-    //console.log('teste teste');
-    //setTimeout(() => {
-    //}, 4000);
+    if (window.location.href.includes('localhost')) {
+
+      // eslint-disable-next-line prefer-template
+      fetch(baseUrl + 'categorias')
+        .then(async (serverAnswer) => {
+          if (serverAnswer.ok) {
+            const answer = await serverAnswer.json();
+            setCategories(answer);
+            return;
+          }
+          throw new Error('Não foi possível pegar os dados');
+        });
+    }
   }, []);
   return (
     <PageDefault>
