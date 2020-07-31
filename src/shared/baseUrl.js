@@ -1,2 +1,2 @@
 // eslint-disable-next-line import/prefer-default-export
-export const baseUrl = 'http://localhost:3001/';
+export const baseUrl = 'https://cookflix.herokuapp.com/';

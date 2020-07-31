@@ -1,18 +1,22 @@
 import React from 'react';
 import { FooterBase } from './styles';
+import Logo from '../../assets/img/Logo.png';
 
 function Footer() {
   return (
     <FooterBase>
-      <a href="https://fontmeme.com/netflix-font/">
-        <img
-          src="https://fontmeme.com/permalink/200729/d79103fe8d8682456ba7ca03ec47f13c.png"
-          alt="netflix-font"
-          border="0"
-        />
-      </a>
+      <img
+        height="50px"
+        src={Logo}
+        alt="netflix-font"
+        border="0"
+      />
       <p>
-        Suas vídeo-aulas organizadas por disciplina
+        Orgulhosamente criado durante a
+        {' '}
+        <a href="https://www.alura.com.br/">
+          Imersão React da Alura
+        </a>
       </p>
     </FooterBase>
   );

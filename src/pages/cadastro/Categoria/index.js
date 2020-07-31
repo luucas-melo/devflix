@@ -33,12 +33,11 @@ function CategoryRegister() {
   }
   useEffect(() => {
     if (window.location.href.includes('localhost')) {
-
       // eslint-disable-next-line prefer-template
       fetch(baseUrl + 'categorias')
-        .then(async (serverAnswer) => {
-          if (serverAnswer.ok) {
-            const answer = await serverAnswer.json();
+        .then(async (response) => {
+          if (response.ok) {
+            const answer = await response.json();
             setCategories(answer);
             return;
           }
@@ -46,6 +45,7 @@ function CategoryRegister() {
         });
     }
   }, []);
+
   return (
     <PageDefault>
 
