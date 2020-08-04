@@ -8,7 +8,7 @@ function Carousel({
   category,
 }) {
   const categoryTitle = category.title;
-  const categoryColor = category.cor;
+  const categoryColor = category.color;
   const categoryExtraLink = category.link_extra;
   const { videos } = category;
   return (

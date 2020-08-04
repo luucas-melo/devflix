@@ -1,10 +1,175 @@
 {
-    "categorias": [
-        {
-            "id": 1,
-            "name": "Front End",
-            "description": "Uma categoria",
-            "color": "#cbd1ff"
-        }
-    ]
+  "categorias": [
+    {
+      "id": 1,
+      "title": "Massas",
+      "color": "#d6c017"
+    },
+    {
+      "id": 2,
+      "title": "Peixes e frutos do mar",
+      "color": "#00C86F"
+    },
+    {
+      "id": 3,
+      "title": "Cozinha básica",
+      "color": "#9cd33b"
+    },
+    {
+      "id": 4,
+      "title": "Bolos e tortas",
+      "color": "orange"
+    },
+    {
+      "id": 5,
+      "title": "Doces e sobremesas",
+      "color": "red"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "title": "APRENDA A FAZER RAVIOLI - DAYSE PAPAROTO",
+      "url": "https://www.youtube.com/watch?v=wkkKq1FSPjw"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "title": "LASANHA BOLONHESA SIMPLES | RECEITAS DA CRIS",
+      "url": "https://www.youtube.com/watch?v=wF368hEJsaM"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "title": "A MELHOR RECEITA DE PANQUECA QUE VOCÊ JÁ VIU | MASSA BÁSICA | Gabriel Freitas",
+      "url": "https://www.youtube.com/watch?v=hBGqcogtJ1w"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "title": "Macarrão com Cogumelo - O Melhor Prato",
+      "url": "https://www.youtube.com/watch?v=sCAVANCELII"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "title": "Espaguete à Bolonhesa | Cozinha do Edu",
+      "url": "https://www.youtube.com/watch?v=0hdcsZqwsDk"
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "title": "Macarrão com Camarão - Receita de uma panela só",
+      "url": "https://www.youtube.com/watch?v=ftJmOf1oERk"
+    },
+    {
+      "id": 7,
+      "categoriaId": 1,
+      "title": "COMO PREPARAR RAVIÓLI DE CARNE",
+      "url": "https://www.youtube.com/watch?v=CqHVLP_NRHk"
+    },
+    {
+      "id": 8,
+      "categoriaId": 2,
+      "title": "CAMARÃO NA MORANGA SIMPLES FÁCIL E RÁPIDO - Culinária em Casa",
+      "url": "https://www.youtube.com/watch?v=jBsH2jPmpnU"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "title": "Bacalhau Assado no Forno com Batatas | Receita Nova!",
+      "url": "https://www.youtube.com/watch?v=cYZXLq06oaU"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "title": "O melhor Filé de Peixe - Chef Taico",
+      "url": "https://www.youtube.com/watch?v=_as9-VsRNKs"
+    },
+    {
+      "id": 11,
+      "categoriaId": 2,
+      "title": "Bobó de Camarão Simples Rápido Fácil e Muito Gostoso",
+      "url": "https://www.youtube.com/watch?v=SBV10fC0eIU"
+    },
+    {
+      "id": 12,
+      "categoriaId": 3,
+      "title": "COMO FAZER ARROZ com Leo Young | DICAS MASTERCHEF",
+      "url": "https://www.youtube.com/watch?v=X7BlJ_Y9FOo"
+    },
+    {
+      "id": 13,
+      "categoriaId": 3,
+      "title": "COMO FAZER FEIJÃO | Cozinha Básica",
+      "url": "https://www.youtube.com/watch?v=cNuf6HXk7BU"
+    },
+    {
+      "id": 14,
+      "categoriaId": 3,
+      "title": "O MELHOR PEITO DE FRANGO DA VIDA - Cozinha básica",
+      "url": "https://www.youtube.com/watch?v=xwO9L2sUfJg"
+    },
+    {
+      "id": 15,
+      "categoriaId": 3,
+      "title": "O melhor Bife Acebolado - Chef Taico",
+      "url": "https://www.youtube.com/watch?v=1ZxbkOFLauc"
+    },
+    {
+      "id": 16,
+      "categoriaId": 4,
+      "title": "BOLO DE MAÇÃ DE LIQUIDIFICADOR | BOLOS CASEIROS FAÇA E VENDA | DIKA DA NAKA",
+      "url": "https://www.youtube.com/watch?v=8XK0PfASyXs"
+    },
+    {
+      "id": 17,
+      "categoriaId": 4,
+      "title": "BOLO DE CHOCOLATE DE LIQUIDIFICADOR | SUPER FÁCIL E RÁPIDO",
+      "url": "https://www.youtube.com/watch?v=B30acVKQzQ0"
+    },
+    {
+      "id": 18,
+      "categoriaId": 4,
+      "title": "PAVÊ - FÁCIL RÁPIDO E DELICIOSO - ESPECIAL DE NATAL - RECEITAS DA CRIS",
+      "url": "https://www.youtube.com/watch?v=KtG5yL13uBY"
+    },
+    {
+      "id": 19,
+      "categoriaId": 5,
+      "title": "O MELHOR BOLO GELADO DE COCO - Macio e Delicioso - CHEF LÉO OLIVEIRA",
+      "url": "https://www.youtube.com/watch?v=R-V89c4UE_I"
+    },
+    {
+      "id": 20,
+      "categoriaId": 5,
+      "title": "SOBREMESA RÁPIDA/MOUSSE DE LIMÃO",
+      "url": "https://www.youtube.com/watch?v=QISGy29-ieU"
+    },
+    {
+      "id": 21,
+      "categoriaId": 5,
+      "title": "COMO FAZER UM BRIGADEIRO PERFEITO",
+      "url": "https://www.youtube.com/watch?v=rh-SlxmZdzQ"
+    },
+    {
+      "id": 22,
+      "categoriaId": 5,
+      "title": "BOLO DE SORVETE SUPER FÁCIL E DELICIOSO. SORVETE CASEIRO",
+      "url": "https://www.youtube.com/watch?v=JvHlMMdip_o"
+    },
+    {
+      "title": "COMO FAZER MILK-SHAKE ORIGINAL COM 2 INGREDIENTES!!!",
+      "url": "https://www.youtube.com/watch?v=WPujbcQiXSE",
+      "categoriaId": 5,
+      "id": 23
+    },
+    {
+      "title": "COMO FAZER MILK-SHAKE ORIGINAL COM 2 INGREDIENTES!!!",
+      "url": "https://www.youtube.com/watch?v=WPujbcQiXSE",
+      "categoriaId": 5,
+      "id": 24
+    }
+  ]
 }

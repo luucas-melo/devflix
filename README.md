@@ -1,4 +1,4 @@
-# devflix
+# cookflix
 imersão react da Alura - criando uma aplicação inspirado na netflix
 
 ## Como rodar o projeto?

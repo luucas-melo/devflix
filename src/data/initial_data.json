@@ -1,8 +1,8 @@
 {
-  "categories": [
+  "categorias": [
     {
       "title": "Massas",
-      "cor": "#6BD1FF",
+      "color": "#6BD1FF",
       "videos": [
         {
           "title": "APRENDA A FAZER RAVIOLI - DAYSE PAPAROTO",
@@ -36,7 +36,7 @@
     },
     {
       "title": "Peixes e frutos do mar",
-      "cor": "#00C86F",
+      "color": "#00C86F",
       "videos": [
         {
           "title": "CAMARÃO NA MORANGA SIMPLES FÁCIL E RÁPIDO - Culinária em Casa",
@@ -58,7 +58,7 @@
     },
     {
       "title": "Cozinha básica",
-      "cor": "#9cd33b",
+      "color": "#9cd33b",
       "videos": [
         {
           "title": "COMO FAZER ARROZ com Leo Young | DICAS MASTERCHEF",
@@ -80,7 +80,7 @@
     },
     {
       "title": "Bolos e tortas",
-      "cor": "orange",
+      "color": "orange",
       "videos": [
         {
           "title": "BOLO DE MAÇÃ DE LIQUIDIFICADOR | BOLOS CASEIROS FAÇA E VENDA | DIKA DA NAKA",
@@ -102,7 +102,7 @@
     },
     {
       "title": "Doces e sobremesas",
-      "cor": "red",
+      "color": "red",
       "videos": [
         {
           "title": "SOBREMESA RÁPIDA/MOUSSE DE LIMÃO",

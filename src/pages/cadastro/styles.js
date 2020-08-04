@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Button = styled.button` 
     width: 180px;
-    height: 30px;   
+    height: 50px;   
     display: inline-block;
     margin-right: 20px;
     border-radius: 5px;
@@ -20,3 +20,5 @@ export const Button = styled.button`
         margin-bottom:  4px;
     }
 `;
+
+
