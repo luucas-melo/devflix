@@ -6,17 +6,17 @@ import PageDefault from '../../../components/PageDefault';
 import { Button } from '../styles';
 import FormField from '../../../components/FormField';
 import useForm from '../../../hooks/useForm';
+import categoriesRepository from '../../../repositories/categories';
 
 function CategoryRegister() {
   const InitialValues = {
     title: '',
     description: '',
-    color: '',
+    color: '#000000',
   };
 
   const { handleOnChange, values, clearForm } = useForm(InitialValues);
   const [categories, setCategories] = useState([]);
-
   /*
    useEffect(() => {
      const URL = window.location.hostname.includes('localhost')
@@ -40,8 +40,8 @@ function CategoryRegister() {
 
       <h1>Cadastro de Categoria: {values.title}</h1>
 
-      <form onSubmit={function handleSubmit(event) {
-        event.preventDefault();
+      <form onSubmit={function handleSubmit(e) {
+        e.preventDefault();
         setCategories([
           ...categories,
           values,
@@ -73,14 +73,14 @@ function CategoryRegister() {
           value={values.color}
           onChange={handleOnChange}
         />
-        <div>
+        <Button.Div>
           <Button type="submit">
             Cadastrar
           </Button>
-          <Button>
+          <Button type="button">
             Limpar
           </Button>
-        </div>
+        </Button.Div>
       </form>
 
       {categories.lenght === 0 && (
@@ -89,13 +89,20 @@ function CategoryRegister() {
         </div>
       )}
 
-      <ul>
+      <table border="1">
         {categories.map((category) => (
-          <li key={`${category.title}`}>
-            {category.title}
-          </li>
+          <tr key={`${category.title}`}>
+            <td>{category.title}</td>
+            <td>{category.description}</td>
+            <td>{category.color}</td>
+          </tr>
         ))}
-      </ul>
+      </table>
+      <Button.Div>
+        <Button.Send type="submit">
+          Enviar
+        </Button.Send>
+      </Button.Div>
       <Link to="/">
         Ir para home
       </Link>

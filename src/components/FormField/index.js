@@ -15,6 +15,7 @@ function FormField({
     <WrapperFormField>
       <Label>
         <Input
+          required
           as={tag}
           id={fieldId}
           type={type}

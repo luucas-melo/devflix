@@ -2,6 +2,22 @@ import config from '../config';
 
 const URL_CATEGORIES = `${config.baseUrl}categorias`;
 
+function createCategories(categoryObject) {
+  return fetch(URL_CATEGORIES, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(categoryObject),
+  })
+    .then(async (response) => {
+      if (response.ok) {
+        const answer = await response.json();
+        return answer;
+      }
+      throw new Error('Não foi possível pegar os dados');
+    });
+}
 function getAll() {
   return fetch(URL_CATEGORIES)
     .then(async (response) => {
@@ -24,6 +40,7 @@ function getAllWithVideos() {
     });
 }
 export default {
+  createCategories,
   getAllWithVideos,
   getAll,
 };

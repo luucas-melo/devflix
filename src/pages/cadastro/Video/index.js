@@ -27,13 +27,13 @@ function CadastroVideo() {
       <form onSubmit={(e) => {
         e.preventDefault();
 
-        const ChosenCategory = categories.find((category) => category.title === values.category);
+        // const ChosenCategory = categories.find((category) => category.title === values.category);
         // console.log('categoria escolhida', ChosenCategory);
         // alert('Video Cadastrado com sucesso!!!');
         videoRepository.create({
           title: values.title,
           url: values.url,
-          categoriaId: 5,
+          categoriaId: values.categoriaId,
         })
           .then(() => {
             history.push('/');
@@ -65,7 +65,7 @@ function CadastroVideo() {
           <Button type="submit">
             Cadastrar
           </Button>
-          <Button>
+          <Button type="button">
             Limpar
           </Button>
         </div>
