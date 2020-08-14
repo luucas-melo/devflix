@@ -24,6 +24,11 @@
       "id": 5,
       "title": "Doces e sobremesas",
       "color": "red"
+    },
+    {
+      "title": "Sucos",
+      "color": "#f45f33",
+      "id": 6
     }
   ],
   "videos": [

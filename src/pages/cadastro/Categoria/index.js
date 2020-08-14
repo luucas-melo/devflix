@@ -7,7 +7,7 @@ import { Button, Table } from '../styles';
 import FormField from '../../../components/FormField';
 import useForm from '../../../hooks/useForm';
 import config from '../../../config';
-// import categoriesRepository from '../../../repositories/categories';
+import categoriesRepository from '../../../repositories/categories';
 
 function CategoryRegister() {
   const InitialValues = {
@@ -38,6 +38,10 @@ function CategoryRegister() {
 
       <form onSubmit={function handleSubmit(e) {
         e.preventDefault();
+        categoriesRepository.createCategories({
+          title: values.title,
+          color: values.color,
+        });
         setCategories([
           ...categories,
           values,
@@ -73,7 +77,7 @@ function CategoryRegister() {
           <Button type="submit">
             Cadastrar
           </Button>
-          <Button type="button">
+          <Button type="button" onClick={clearForm}>
             Limpar
           </Button>
         </Button.Div>
@@ -84,7 +88,7 @@ function CategoryRegister() {
           Loading...
         </div>
       )}
-      <Table border="1">
+      <Table>
         <th>Nome</th>
         <th>Cor</th>
         <th>Editar</th>
@@ -100,11 +104,7 @@ function CategoryRegister() {
           </tbody>
         ))}
       </Table>
-      <Button.Div>
-        <Button.Send type="submit">
-          Enviar
-        </Button.Send>
-      </Button.Div>
+
       <Link to="/">
         Ir para home
       </Link>

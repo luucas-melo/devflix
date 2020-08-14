@@ -26,7 +26,7 @@ function CadastroVideo() {
       <h1>Cadastro de Video</h1>
       <form onSubmit={(e) => {
         e.preventDefault();
-
+        
         // const ChosenCategory = categories.find((category) => category.title === values.category);
         // console.log('categoria escolhida', ChosenCategory);
         // alert('Video Cadastrado com sucesso!!!');
