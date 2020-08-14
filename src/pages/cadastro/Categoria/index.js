@@ -1,12 +1,13 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable spaced-comment */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
-import { Button } from '../styles';
+import { Button, Table } from '../styles';
 import FormField from '../../../components/FormField';
 import useForm from '../../../hooks/useForm';
-import categoriesRepository from '../../../repositories/categories';
+import config from '../../../config';
+// import categoriesRepository from '../../../repositories/categories';
 
 function CategoryRegister() {
   const InitialValues = {
@@ -17,23 +18,18 @@ function CategoryRegister() {
 
   const { handleOnChange, values, clearForm } = useForm(InitialValues);
   const [categories, setCategories] = useState([]);
-  /*
-   useEffect(() => {
-     const URL = window.location.hostname.includes('localhost')
-       ? 'http://localhost:3001/categorias'
-       : baseUrl + 'categorias';
-       fetch(URL)
-         .then(async (response) => {
-           if (response.ok) {
-             const answer = await response.json();
-             setCategories(answer);
-             return;
-           }
-           throw new Error('Não foi possível pegar os dados');
-         });
-
-   }, []);
- */
+  useEffect(() => {
+    const URL = `${config.baseUrl}categorias`;
+    fetch(URL)
+      .then(async (response) => {
+        if (response.ok) {
+          const answer = await response.json();
+          setCategories([...answer]);
+          return;
+        }
+        throw new Error('Não foi possível pegar os dados');
+      });
+  }, []);
 
   return (
     <PageDefault>
@@ -88,16 +84,22 @@ function CategoryRegister() {
           Loading...
         </div>
       )}
-
-      <table border="1">
+      <Table border="1">
+        <th>Nome</th>
+        <th>Cor</th>
+        <th>Editar</th>
+        <th>Excluir</th>
         {categories.map((category) => (
-          <tr key={`${category.title}`}>
-            <td>{category.title}</td>
-            <td>{category.description}</td>
-            <td>{category.color}</td>
-          </tr>
+          <tbody key={`${category.title}`}>
+            <tr>
+              <td>{category.title}</td>
+              <td>{category.color}</td>
+              <td><a href="/">Editar</a></td>
+              <td><a href="/">Excluir</a></td>
+            </tr>
+          </tbody>
         ))}
-      </table>
+      </Table>
       <Button.Div>
         <Button.Send type="submit">
           Enviar
