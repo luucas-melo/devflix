@@ -18,6 +18,19 @@ function createCategories(categoryObject) {
       throw new Error('Não foi possível pegar os dados');
     });
 }
+
+function deleteCategories(id) {
+  return fetch(`${URL_CATEGORIES}/${id}`, {
+    method: 'DELETE',
+  })
+    .then(async (response) => {
+      if (response.ok) {
+        const answer = await response.json();
+        return answer;
+      }
+    });
+}
+
 function getAll() {
   return fetch(URL_CATEGORIES)
     .then(async (response) => {
@@ -41,6 +54,7 @@ function getAllWithVideos() {
 }
 export default {
   createCategories,
+  deleteCategories,
   getAllWithVideos,
   getAll,
 };

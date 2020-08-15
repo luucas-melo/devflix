@@ -69,7 +69,11 @@ Button.Div = styled.div`
         margin-right: 20px;
     }
 `;
-
+Button.Link = styled.a`
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+`;
 Button.Send = styled(Button)`
     width: 50%;
     height: 50px;   

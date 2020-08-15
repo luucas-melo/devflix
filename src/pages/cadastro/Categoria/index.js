@@ -15,7 +15,6 @@ function CategoryRegister() {
     description: '',
     color: '#000000',
   };
-
   const { handleOnChange, values, clearForm } = useForm(InitialValues);
   const [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -88,18 +87,39 @@ function CategoryRegister() {
           Loading...
         </div>
       )}
+
       <Table>
-        <th>Nome</th>
-        <th>Cor</th>
-        <th>Editar</th>
-        <th>Excluir</th>
+        <thead>
+          <th>Nome</th>
+          <th>Cor</th>
+          <th>Editar</th>
+          <th>Excluir</th>
+        </thead>
         {categories.map((category) => (
           <tbody key={`${category.title}`}>
             <tr>
               <td>{category.title}</td>
               <td>{category.color}</td>
-              <td><a href="/">Editar</a></td>
-              <td><a href="/">Excluir</a></td>
+              <td>
+                <Button.Link type="button">
+                  Editar
+                </Button.Link>
+              </td>
+              <td key={category.id}>
+                <Button.Link
+                  onClick={
+                    () => {
+                      categoriesRepository.deleteCategories(category.id);
+                      setCategories([
+                        ...categories,
+                      ]);
+                    }
+                  }
+                  type="button"
+                >
+                  Excluir
+                </Button.Link>
+              </td>
             </tr>
           </tbody>
         ))}
