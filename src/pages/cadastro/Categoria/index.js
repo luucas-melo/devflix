@@ -85,7 +85,6 @@ function CategoryRegister() {
           Loading...
         </div>
       )}
-
       <ListComponent categories={categories} />
 
       <Link to="/">

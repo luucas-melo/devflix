@@ -6,11 +6,17 @@ export const Container = styled.div`
         font-style: normal;
         font-weight: bold;
         font-size: 16px;
-        padding: 12px 15px;
-        display: inline-block;
+        padding: 15px 12px;
+        display: flex;  
+        flex-direction: row;
+        margin-left: 3px;
         width: 100%;
         background-color: #333;
         border-radius: 3px;
+
+    }
+    .Collapsible__trigger span  {
+        margin-right: auto;
     }
     .Collapsible__trigger:hover {
         cursor: pointer;
@@ -24,6 +30,7 @@ export const Container = styled.div`
         margin: 3px;
         
     }
+
     
 
     
