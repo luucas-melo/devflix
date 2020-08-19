@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-
+    margin-top: 2rem;
     .Collapsible__trigger {
         font-style: normal;
         font-weight: bold;
@@ -9,13 +9,13 @@ export const Container = styled.div`
         padding: 15px 12px;
         display: flex;  
         flex-direction: row;
-        margin-left: 3px;
         width: 100%;
         background-color: #333;
         border-radius: 3px;
 
     }
     .Collapsible__trigger span  {
+        
         margin-right: auto;
     }
     .Collapsible__trigger:hover {
@@ -26,14 +26,13 @@ export const Container = styled.div`
         width: 100%;
         text-align: center;
         border-radius: 3px;
-        
         margin: 3px;
-        
+        background-color: #A08F8F; 
+       
     }
-
-    
-
-    
+    .Collapsible:focus {
+        height: 50px;
+    }
 `;
 export const List = styled.ul`
     padding: 0;

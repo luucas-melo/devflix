@@ -1,22 +1,31 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import Collapsible from 'react-collapsible';
-import { FaTrashAlt, FaCentercode } from 'react-icons/fa';
+import { FaTrashAlt } from 'react-icons/fa';
 import { Container } from './styles';
+import categoriesRepository from '../../repositories/categories';
+import CategoryRegister from '../../pages/cadastro/Categoria';
 
-function ListComponent({ categories }) {
+function ListComponent({ categories, onRemove }) {
   return (
     <Container>
       {categories.map((category) => (
         <Collapsible
-          id={category.id}
           trigger={(
             <>
               <span>{category.title}</span>
               {' '}
-              <FaTrashAlt />
+              <FaTrashAlt
+                onClick={
+                  () => {
+                    onRemove(category.id);
+                    categoriesRepository.deleteCategories(category.id);
+                  }
+
+                }
+              />
             </>
-)}
+          )}
         >
           <p>{category.id}</p>
         </Collapsible>

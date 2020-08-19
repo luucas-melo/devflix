@@ -10,6 +10,7 @@ import config from '../../../config';
 import categoriesRepository from '../../../repositories/categories';
 import ListComponent from '../../../components/ListItem';
 
+
 function CategoryRegister() {
   const InitialValues = {
     title: '',
@@ -28,6 +29,10 @@ function CategoryRegister() {
       });
   }, []);
 
+  function handleRemove(id) {
+    const newList = categories.filter((category) => category.id !== id);
+    setCategories(newList);
+  }
   return (
     <PageDefault>
 
@@ -85,8 +90,7 @@ function CategoryRegister() {
           Loading...
         </div>
       )}
-      <ListComponent categories={categories} />
-
+      <ListComponent categories={categories} onRemove={handleRemove} />
       <Link to="/">
         Ir para home
       </Link>
