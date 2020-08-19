@@ -22,13 +22,17 @@ function createCategories(categoryObject) {
 function deleteCategories(id) {
   return fetch(`${URL_CATEGORIES}/${id}`, {
     method: 'DELETE',
-  })
-    .then(async (response) => {
-      if (response.ok) {
-        const answer = await response.json();
-        return answer;
-      }
-    });
+    headers: {
+      'Content-type': 'application/json',
+    },
+  }).then(async (response) => {
+    if (response.ok) {
+      const answer = await response.json();
+      return answer;
+    }
+
+    throw new Error('Não foi possível deletar a categoria :(');
+  });
 }
 
 function getAll() {
