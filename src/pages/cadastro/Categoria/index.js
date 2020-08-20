@@ -6,10 +6,8 @@ import PageDefault from '../../../components/PageDefault';
 import { Button } from '../styles';
 import FormField from '../../../components/FormField';
 import useForm from '../../../hooks/useForm';
-import config from '../../../config';
 import categoriesRepository from '../../../repositories/categories';
 import ListComponent from '../../../components/ListItem';
-
 
 function CategoryRegister() {
   const InitialValues = {
@@ -42,12 +40,13 @@ function CategoryRegister() {
         e.preventDefault();
         categoriesRepository.createCategories({
           title: values.title,
+          description: values.description,
           color: values.color,
-        });
-        setCategories([
-          ...categories,
-          values,
-        ]);
+        })
+          .then((newValue) => setCategories([
+            ...categories,
+            newValue,
+          ]));
         clearForm();
       }}
       >
@@ -85,11 +84,13 @@ function CategoryRegister() {
         </Button.Div>
       </form>
 
-      {categories.lenght === 0 && (
-        <div>
-          Loading...
-        </div>
-      )}
+      {
+    categories.lenght === 0 && (
+      <div>
+        Loading...
+      </div>
+    )
+  }
       <ListComponent categories={categories} onRemove={handleRemove} />
       <Link to="/">
         Ir para home

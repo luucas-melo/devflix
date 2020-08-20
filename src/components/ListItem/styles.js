@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -30,42 +31,12 @@ export const Container = styled.div`
         background-color: #A08F8F; 
        
     }
+    .Collapsible p {
+        margin-left: 10px;
+        text-align: left; 
+       
+    }
     .Collapsible:focus {
         height: 50px;
     }
-`;
-export const List = styled.ul`
-    padding: 0;
-`;
-List.Button = styled.button`
-    padding: 12px 15px;
-    width:100%;
-    background-color: #333;
-    color: var(--white);
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-
-    box-sizing: border-box;
-    margin-bottom: 3px;
-    border: none;
-    border-radius: 0.75rem;
-    
-
-    text-decoration: none;
-    outline: none;
-    display: inline-block;
-    transition: opacity .3s;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-        background-color: #1E1D1D;
-    }
-`;
-export const ListItem = styled.li`
-    padding: 12px 15px;
-    
-    margin-bottom: 3px;
 `;

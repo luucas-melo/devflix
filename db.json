@@ -3,26 +3,31 @@
     {
       "id": 1,
       "title": "Massas",
+      "description": "As massas fazem muito sucesso no Brasil, elas não se referem apenas ao macarrão, confira as receitas",
       "color": "#d6c017"
     },
     {
       "id": 2,
       "title": "Peixes e frutos do mar",
+      "description": "Peixes e frutos do mar fazem parte da refeição de boa parte do mundo, confira as receitas",
       "color": "#00C86F"
     },
     {
       "id": 3,
       "title": "Cozinha básica",
+      "description": "Aprenda o básico da cozinha para conseguir se virar",
       "color": "#9cd33b"
     },
     {
       "id": 4,
       "title": "Bolos e tortas",
+      "description": "Aprenda a fazer diferentes tipos de bolos e tortas com diferentes gostos",
       "color": "orange"
     },
     {
       "id": 5,
       "title": "Doces e sobremesas",
+      "description": "Doces e sobremesas sempre são viciantes, por isso devemos saber fazer, principalmente para comer depois de um bom almoço",
       "color": "red"
     }
   ],
@@ -170,6 +175,11 @@
       "url": "https://www.youtube.com/watch?v=WPujbcQiXSE",
       "categoriaId": 5,
       "id": 24
+    },
+    {
+      "title": "dsa21312",
+      "url": "dsa",
+      "id": 25
     }
   ]
 }

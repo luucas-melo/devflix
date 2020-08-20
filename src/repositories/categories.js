@@ -15,7 +15,7 @@ function createCategories(categoryObject) {
         const answer = await response.json();
         return answer;
       }
-      throw new Error('Não foi possível pegar os dados');
+      throw new Error('Não foi possível pegar os dados :(');
     });
 }
 
