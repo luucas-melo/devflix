@@ -29,6 +29,12 @@
       "title": "Doces e sobremesas",
       "description": "Doces e sobremesas sempre são viciantes, por isso devemos saber fazer, principalmente para comer depois de um bom almoço",
       "color": "red"
+    },
+    {
+      "title": "Sucos",
+      "description": "Aprenda receitas dos sucos mais refrescantes",
+      "color": "#1eff00",
+      "id": 6
     }
   ],
   "videos": [
@@ -171,15 +177,10 @@
       "id": 23
     },
     {
-      "title": "COMO FAZER MILK-SHAKE ORIGINAL COM 2 INGREDIENTES!!!",
-      "url": "https://www.youtube.com/watch?v=WPujbcQiXSE",
-      "categoriaId": 5,
+      "title": "COMO FAZER UM DELICIOSO SUCO DE MARACUJÁ",
+      "url": "https://www.youtube.com/watch?v=a4i7vjxY_eE",
+      "categoriaId": 6,
       "id": 24
-    },
-    {
-      "title": "dsa21312",
-      "url": "dsa",
-      "id": 25
     }
   ]
 }

@@ -4,12 +4,14 @@ import PageDefault from '../../../components/PageDefault';
 import useForm from '../../../hooks/useForm';
 import FormField from '../../../components/FormField';
 import { Button } from '../styles';
-import videoRepository from '../../../repositories/videos';
+import videosRepository from '../../../repositories/videos';
 import categoriesRepository from '../../../repositories/categories';
+import ListComponent from '../../../components/ListItem';
 
 function CadastroVideo() {
   const history = useHistory();
   const [categories, setCategories] = useState([]);
+  const [videos, setVideos] = useState([]);
   const categoryTitles = categories.map(({ title }) => title);
   const { handleOnChange, values } = useForm({});
 
@@ -19,8 +21,15 @@ function CadastroVideo() {
       .then((categoriesFromServer) => {
         setCategories(categoriesFromServer);
       });
+    videosRepository.getAllVideos()
+      .then((videosFromServer) => {
+        setVideos(videosFromServer);
+      });
   }, []);
-
+  function handleRemove(id) {
+    const newList = videos.filter((video) => video.id !== id);
+    setVideos(newList);
+  }
   return (
     <PageDefault>
       <h1>Cadastro de Video</h1>
@@ -29,14 +38,23 @@ function CadastroVideo() {
         // const ChosenCategory = categories.find((category) => category.title === values.category);
         // console.log('categoria escolhida', ChosenCategory);
         // alert('Video Cadastrado com sucesso!!!');
-        videoRepository.create({
-          title: values.title,
-          url: values.url,
-          categoriaId: values.categoriaId,
-        })
-          .then(() => {
-            history.push('/');
-          });
+
+        if (categoryTitles.find((categoryName) => categoryName === values.category)) {
+          const chosenCategory = categories
+            .find((category) => category.title === values.category);
+
+          videosRepository.create({
+            title: values.title,
+            url: values.url,
+            categoriaId: chosenCategory.id,
+          })
+            .then(() => {
+              history.push('/');
+            });
+        } else {
+          alert('Categoria inexistente, a mesma deve ser criada antes de cadastrar o vídeo');
+          history.push('/cadastro/categoria');
+        }
       }}
       >
         <FormField
@@ -60,16 +78,21 @@ function CadastroVideo() {
 
         />
 
-        <div>
+        <Button.Div>
           <Button type="submit">
             Cadastrar
           </Button>
           <Button type="button">
             Limpar
           </Button>
-        </div>
+        </Button.Div>
 
       </form>
+      <ListComponent
+        dataTypeDeleted={videos}
+        onRemove={handleRemove}
+        deleteFromRepository={videosRepository.deleteVideos}
+      />
       <Link to="/cadastro/categoria">
         Cadastrar Categoria
       </Link>

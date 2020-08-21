@@ -91,7 +91,11 @@ function CategoryRegister() {
       </div>
     )
   }
-      <ListComponent categories={categories} onRemove={handleRemove} />
+      <ListComponent
+        dataTypeDeleted={categories}
+        onRemove={handleRemove}
+        deleteFromRepository={categoriesRepository.deleteCategories}
+      />
       <Link to="/">
         Ir para home
       </Link>

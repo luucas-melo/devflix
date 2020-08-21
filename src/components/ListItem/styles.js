@@ -16,7 +16,6 @@ export const Container = styled.div`
 
     }
     .Collapsible__trigger span  {
-        
         margin-right: auto;
     }
     .Collapsible__trigger:hover {
@@ -29,12 +28,18 @@ export const Container = styled.div`
         border-radius: 3px;
         margin: 3px;
         background-color: #A08F8F; 
-       
     }
-    .Collapsible p {
+    .Collapsible__contentInner {
+        width: 100%;
+        display: flex;
+        margin-top: 3px;
+        text-align: left; 
+    }
+    .Collapsible__contentInner a { 
+        display: flex;
         margin-left: 10px;
         text-align: left; 
-       
+        padding-top:0;
     }
     .Collapsible:focus {
         height: 50px;

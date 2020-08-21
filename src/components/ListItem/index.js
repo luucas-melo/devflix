@@ -3,24 +3,22 @@ import React from 'react';
 import Collapsible from 'react-collapsible';
 import { FaTrashAlt } from 'react-icons/fa';
 import { Container } from './styles';
-import categoriesRepository from '../../repositories/categories';
 
-
-function ListComponent({ categories, onRemove }) {
+function ListComponent({ dataTypeDeleted, onRemove, deleteFromRepository }) {
   return (
     <Container>
-      {categories.map((category) => (
+      {dataTypeDeleted.map((dataType) => (
         <Collapsible
-          key={category.id}
+          key={dataType.id}
           trigger={(
             <>
-              <span>{category.title}</span>
+              <span>{dataType.title}</span>
               {' '}
               <FaTrashAlt
                 onClick={
                   () => {
-                    onRemove(category.id);
-                    categoriesRepository.deleteCategories(category.id);
+                    onRemove(dataType.id);
+                    deleteFromRepository(dataType.id);
                   }
 
                 }
@@ -28,7 +26,7 @@ function ListComponent({ categories, onRemove }) {
             </>
           )}
         >
-          <p>{category.description}</p>
+          <a href={dataType.url}>{dataType.description || dataType.url }</a>
         </Collapsible>
       ))}
     </Container>
