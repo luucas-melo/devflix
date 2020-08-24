@@ -53,6 +53,7 @@ FormField.defaultProps = {
   onChange: () => { },
   suggestions: [],
 
+
 };
 FormField.propTypes = {
   label: PropTypes.string.isRequired,
@@ -61,6 +62,5 @@ FormField.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
   suggestions: PropTypes.arrayOf(PropTypes.string),
-
 };
 export default FormField;

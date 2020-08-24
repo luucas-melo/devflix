@@ -4,9 +4,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
     margin-top: 2rem;
     .Collapsible__trigger {
+        justify-content: space-between;
+         align-items: center;
         font-style: normal;
         font-weight: bold;
-        font-size: 16px;
+        text-align: left;
+        font-size: 1rem;
         padding: 15px 12px;
         display: flex;  
         flex-direction: row;
@@ -15,8 +18,17 @@ export const Container = styled.div`
         border-radius: 3px;
 
     }
-    .Collapsible__trigger span  {
-        margin-right: auto;
+    .Collapsible__trigger p {
+        padding: 0;
+        margin: 0;
+    }
+    .Collapsible__trigger svg{
+        font-size: 50px;
+        display: inline-block;
+        margin-left: auto;
+        top: 50%;
+    }
+
     }
     .Collapsible__trigger:hover {
         cursor: pointer;

@@ -31,7 +31,7 @@ function CadastroVideo() {
     setVideos(newList);
   }
   return (
-    <PageDefault>
+    <PageDefault buttonName="Nova categoria" buttonRoute="/cadastro/categoria">
       <h1>Cadastro de Video</h1>
       <form onSubmit={(e) => {
         e.preventDefault();
@@ -93,9 +93,6 @@ function CadastroVideo() {
         onRemove={handleRemove}
         deleteFromRepository={videosRepository.deleteVideos}
       />
-      <Link to="/cadastro/categoria">
-        Cadastrar Categoria
-      </Link>
     </PageDefault>
   );
 }

@@ -45,30 +45,6 @@
       "url": "https://www.youtube.com/watch?v=wkkKq1FSPjw"
     },
     {
-      "id": 2,
-      "categoriaId": 1,
-      "title": "LASANHA BOLONHESA SIMPLES | RECEITAS DA CRIS",
-      "url": "https://www.youtube.com/watch?v=wF368hEJsaM"
-    },
-    {
-      "id": 3,
-      "categoriaId": 1,
-      "title": "A MELHOR RECEITA DE PANQUECA QUE VOCÊ JÁ VIU | MASSA BÁSICA | Gabriel Freitas",
-      "url": "https://www.youtube.com/watch?v=hBGqcogtJ1w"
-    },
-    {
-      "id": 4,
-      "categoriaId": 1,
-      "title": "Macarrão com Cogumelo - O Melhor Prato",
-      "url": "https://www.youtube.com/watch?v=sCAVANCELII"
-    },
-    {
-      "id": 5,
-      "categoriaId": 1,
-      "title": "Espaguete à Bolonhesa | Cozinha do Edu",
-      "url": "https://www.youtube.com/watch?v=0hdcsZqwsDk"
-    },
-    {
       "id": 6,
       "categoriaId": 1,
       "title": "Macarrão com Camarão - Receita de uma panela só",
@@ -83,13 +59,13 @@
     {
       "id": 8,
       "categoriaId": 2,
-      "title": "CAMARÃO NA MORANGA SIMPLES FÁCIL E RÁPIDO - Culinária em Casa",
+      "title": "CAMARÃO NA MORANGA SIMPLES FÁCIL E RÁPIDO",
       "url": "https://www.youtube.com/watch?v=jBsH2jPmpnU"
     },
     {
       "id": 9,
       "categoriaId": 2,
-      "title": "Bacalhau Assado no Forno com Batatas | Receita Nova!",
+      "title": "Bacalhau Assado no Forno com Batatas",
       "url": "https://www.youtube.com/watch?v=cYZXLq06oaU"
     },
     {
@@ -101,7 +77,7 @@
     {
       "id": 11,
       "categoriaId": 2,
-      "title": "Bobó de Camarão Simples Rápido Fácil e Muito Gostoso",
+      "title": "Bobó de Camarão",
       "url": "https://www.youtube.com/watch?v=SBV10fC0eIU"
     },
     {
@@ -119,7 +95,7 @@
     {
       "id": 14,
       "categoriaId": 3,
-      "title": "O MELHOR PEITO DE FRANGO DA VIDA - Cozinha básica",
+      "title": "O MELHOR PEITO DE FRANGO DA VIDA",
       "url": "https://www.youtube.com/watch?v=xwO9L2sUfJg"
     },
     {
@@ -131,25 +107,25 @@
     {
       "id": 16,
       "categoriaId": 4,
-      "title": "BOLO DE MAÇÃ DE LIQUIDIFICADOR | BOLOS CASEIROS FAÇA E VENDA | DIKA DA NAKA",
+      "title": "BOLO DE MAÇÃ DE LIQUIDIFICADOR ",
       "url": "https://www.youtube.com/watch?v=8XK0PfASyXs"
     },
     {
       "id": 17,
       "categoriaId": 4,
-      "title": "BOLO DE CHOCOLATE DE LIQUIDIFICADOR | SUPER FÁCIL E RÁPIDO",
+      "title": "BOLO DE CHOCOLATE DE LIQUIDIFICADOR ",
       "url": "https://www.youtube.com/watch?v=B30acVKQzQ0"
     },
     {
       "id": 18,
       "categoriaId": 4,
-      "title": "PAVÊ - FÁCIL RÁPIDO E DELICIOSO - ESPECIAL DE NATAL - RECEITAS DA CRIS",
+      "title": "PAVÊ - FÁCIL RÁPIDO E DELICIOSO",
       "url": "https://www.youtube.com/watch?v=KtG5yL13uBY"
     },
     {
       "id": 19,
       "categoriaId": 5,
-      "title": "O MELHOR BOLO GELADO DE COCO - Macio e Delicioso - CHEF LÉO OLIVEIRA",
+      "title": "O MELHOR BOLO GELADO DE COCO",
       "url": "https://www.youtube.com/watch?v=R-V89c4UE_I"
     },
     {
@@ -167,11 +143,11 @@
     {
       "id": 22,
       "categoriaId": 5,
-      "title": "BOLO DE SORVETE SUPER FÁCIL E DELICIOSO. SORVETE CASEIRO",
+      "title": "BOLO DE SORVETE SUPER FÁCIL E DELICIOSO.",
       "url": "https://www.youtube.com/watch?v=JvHlMMdip_o"
     },
     {
-      "title": "COMO FAZER MILK-SHAKE ORIGINAL COM 2 INGREDIENTES!!!",
+      "title": "COMO FAZER MILK-SHAKE",
       "url": "https://www.youtube.com/watch?v=WPujbcQiXSE",
       "categoriaId": 5,
       "id": 23
