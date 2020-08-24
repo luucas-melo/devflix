@@ -1,0 +1,32 @@
+
+
+.container {
+    background-color: black;
+    width: 100%;
+    height: 100%;;
+    border: 4px solid var(--mainColor);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    color: var(--mainColor);
+    text-align: center;   
+    transform: translate(-50%, -50%);
+}
+    
+.container h1 {    
+    margin: 0;
+    font: 30rem solid;
+}
+.container p {
+    margin: 0;
+    font-size: 2rem;
+}
+@media(max-width: 800px) {
+    .container h1 {
+        font: 10rem solid;
+    }
+    .container p{
+        font-size: 1rem;
+    }
+}

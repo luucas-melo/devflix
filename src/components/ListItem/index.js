@@ -12,21 +12,24 @@ function ListComponent({ dataTypeDeleted, onRemove, deleteFromRepository }) {
           key={dataType.id}
           trigger={(
             <>
-              <span>{dataType.title}</span>
+              <p>{dataType.title}</p>
               {' '}
-              <FaTrashAlt
-                onClick={
-                  () => {
-                    onRemove(dataType.id);
-                    deleteFromRepository(dataType.id);
-                  }
+              <div>
+                <FaTrashAlt
+                  size={15}
+                  onClick={
+                    () => {
+                      onRemove(dataType.id);
+                      deleteFromRepository(dataType.id);
+                    }
 
-                }
-              />
+                  }
+                />
+              </div>
             </>
           )}
         >
-          <a href={dataType.url}>{dataType.description || dataType.url }</a>
+          <a href={dataType.url}>{dataType.description || dataType.url}</a>
         </Collapsible>
       ))}
     </Container>

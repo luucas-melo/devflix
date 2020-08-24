@@ -1,7 +1,7 @@
 import React from 'react';
-import Menu from '../Menu'
-import Footer from '../Footer'
 import styled, { css } from 'styled-components';
+import Menu from '../Menu';
+import Footer from '../Footer';
 
 const Main = styled.main`
   background-color: var(--black);
@@ -14,16 +14,17 @@ const Main = styled.main`
         padding: ${paddingAll};
   `}
 `;
-function PageDefault({ children, paddingAll }) {
-    return (
-        <>
-            <Menu />
-            <Main paddingAll={paddingAll}>
-                {children}
-            </Main>
-            <Footer />
-        </>
-    );
+// eslint-disable-next-line react/prop-types
+function PageDefault({ children, paddingAll, buttonName, buttonRoute }) {
+  return (
+    <>
+      <Menu buttonName={buttonName} buttonRoute={buttonRoute} />
+      <Main paddingAll={paddingAll}>
+        {children}
+      </Main>
+      <Footer />
+    </>
+  );
 }
 
 export default PageDefault;

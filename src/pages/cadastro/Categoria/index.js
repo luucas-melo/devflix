@@ -32,7 +32,7 @@ function CategoryRegister() {
     setCategories(newList);
   }
   return (
-    <PageDefault>
+    <PageDefault buttonName="Novo vídeo" buttonRoute="/cadastro/video">
 
       <h1>Cadastro de Categoria: {values.title}</h1>
 
@@ -96,9 +96,6 @@ function CategoryRegister() {
         onRemove={handleRemove}
         deleteFromRepository={categoriesRepository.deleteCategories}
       />
-      <Link to="/">
-        Ir para home
-      </Link>
 
     </PageDefault>
   );
