@@ -18,7 +18,7 @@ function Home() {
       });
   }, []);
   return (
-    <PageDefault paddingAll={0}>
+    <PageDefault paddingAll={0} buttonName="Novo vídeo" buttonRoute="/cadastro/video">
       {initialData.length === 0 && (<div> Loading... </div>)}
       {initialData.map((category, indice) => {
         if (indice === 0) {
