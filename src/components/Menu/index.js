@@ -15,6 +15,10 @@ function Menu({buttonName, buttonRoute}) {
       <Button as={Link} className="ButtonLink" to={buttonRoute}>
         {buttonName}
       </Button>
+      // new button to you
+      <Button as={Link} className="ButtonLink2" to={buttonRoute}>
+        {buttonName}
+      </Button>
     </nav>
   );
 }
